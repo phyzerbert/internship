@@ -1,6 +1,6 @@
 ## Installation Instructions
 
-- Run git clone https://github.com/Jinearth9/internship.git
+- Run git clone https://github.com/phyzerbert/internship.git
 - Create a MySQL database for the project
     - mysql -u root -p
     - create database internship;
