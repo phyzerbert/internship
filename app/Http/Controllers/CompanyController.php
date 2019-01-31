@@ -42,11 +42,8 @@ class CompanyController extends Controller
 
     public function hoursView(Request $request)
     {
-        // $hours = Auth::user()->company->hours;
-        $user_id = $request->user()->id;
-        $company_id = Company::where("user_id",$user_id)->first()->id;
-        $hours = Hour::where("company_id", $company_id)->get();
-        return view('companies.hours',['hours' => $hours]);
+        $myhours = Auth::user()->companyHour;
+        return view('companies.hours',['hours' => $myhours]);
     }
 
     public function accepthour($id)

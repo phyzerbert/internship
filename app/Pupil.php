@@ -20,8 +20,4 @@ class Pupil extends Model
         return $this->belongsToMany('App\Company')->using('App\CompanyPupil')->withPivot('id', 'state');
     }
 
-    public function hours()
-    {
-        return $this->belongsToMany('App\Company')->using('App\Hour')->withPivot('id', 'state','description');
-    }
 }

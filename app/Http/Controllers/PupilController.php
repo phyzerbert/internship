@@ -46,10 +46,7 @@ class PupilController extends Controller
 
     public function companyView(Request $request)
     {
-        $userid = $request->user()->id;
-        $pupil_id = Pupil::where("user_id",$userid)->first()->id;
-        $mycompanies = CompanyPupil::where("pupil_id",$pupil_id)->get();
-    
+        $mycompanies = Auth::user()->pupil->companies;    
         return view('pupils.companies',["mycompanies" => $mycompanies]);
     }
 

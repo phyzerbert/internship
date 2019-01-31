@@ -54,4 +54,14 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Teacher');
     }
+    
+    public function pupilHour()
+    {
+        return $this->hasManyThrough('App\Hour', 'App\Pupil');
+    }
+
+    public function companyHour()
+    {
+        return $this->hasManyThrough('App\Hour', 'App\company');
+    }
 }
