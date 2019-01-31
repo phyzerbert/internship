@@ -27,7 +27,7 @@
 
                                 ?>
                                 <li class="list-group-item list-group-item-action justify-content-between align-items-center">
-                                    <p>You are now working at {{$my_company_name}}.</p>
+                                    <p>You are now working at <span style="color:green;font-size:1.3em;">{{$my_company_name}}</span>.</p>
                                     <p>Send in your hours.</p>
                                     
                                     <form action="{{ route('pupil.requesthours') }}" method="POST" class="my-2 justify-content-end">
