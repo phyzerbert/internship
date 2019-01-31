@@ -22,20 +22,20 @@
                                             <?php
                                                 $pupil_name = DB::table('users')->find($hour->pupil_id)->name;
                                             ?>
-                                            <p>{{ $pupil_name }} as requested to accept his hours</p>
+                                            <p><span style="color:green;font-size:1.3em;">{{ $pupil_name }}</span> as requested to accept his hours</p>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    Weeknumbers: {{ $hour->week }}
+                                                    <span style="color:green;">Weeknumbers: </span>{{ $hour->week }}
                                                 </div>
                                                 <div class="col-md-6">
-                                                    Hours: {{ $hour->hour }}
+                                                    <span style="color:green;">Hours: </span>{{ $hour->hour }}
                                                 </div>
                                             </div>                                            
                                         </div>
                                         <div class="col-md-7">
                                             <div class="row">                                            
                                                 <div class="col-md-8">
-                                                    Description: {{$hour->description}}
+                                                    <span style="color:green;">Description : </span>{{$hour->description}}
                                                 </div>
                                                 <div class="col-md-4 btn-toolbar">
                                                     @if ($hour->state == 0)
